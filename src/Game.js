@@ -1,29 +1,20 @@
 import GameObject from "./GameObject.js"
-
+import Input from './Input'
+import Player from './Player'
 export default class Game {
   constructor(width, height) {
     this.width = width
     this.height = height
     this.x = 0
-    this.gameObjects = [
-      new GameObject(this, 0, 100, 20, 20, '#f00', 100),
-      new GameObject(this, 0, 200, 20, 20, '#0f0', 200),
-      new GameObject(this, 0, 300, 20, 20, '#00f', 300)
-    ]
+    this.input = new Input(this)
+    this.player = new Player(0, 0, 50, 50, "green", this)
   }
 
   update(deltaTime) {
-    this.gameObjects.forEach(gameObject => {
-      gameObject.update(deltaTime)
-    })
-    this.x += 0.1
+    this.player.update(deltaTime)
   }
 
   draw(ctx) {
-    ctx.fillStyle = "green"
-    ctx.fillRect(this.x, 200, 20, 200)
-    this.gameObjects.forEach(gameObject => {
-      gameObject.draw(ctx)
-    })
+    this.player.draw(ctx)
   }
 }

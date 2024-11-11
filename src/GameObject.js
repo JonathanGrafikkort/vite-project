@@ -1,5 +1,5 @@
 export default class GameObject {
-    constructor(game, x, y, width, height, color, maxSpeed) {
+    constructor(x, y, width, height, color, game) {
       this.game = game
       this.x = x
       this.y = y
@@ -7,12 +7,12 @@ export default class GameObject {
       this.height = height
       this.color = color
       this.currentSpeed = 0
-      this.maxSpeed = maxSpeed
+      this.game = game
       this.direction = 1
     }
   
     update(deltaTime) {
-      this.x = this.x + this.maxSpeed / 1000 * deltaTime * this.direction
+      this.x = this.x + this.game / 1000 * deltaTime * this.direction
       if (this.x > this.game.width - this.width) this.direction = -1
       if (this.x < 0) this.direction = 1
     }
