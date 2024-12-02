@@ -6,15 +6,10 @@ export default class GameObject {
       this.width = width
       this.height = height
       this.color = color
-      this.currentSpeed = 0
-      this.game = game
-      this.direction = 1
     }
   
     update(deltaTime) {
-      this.x = this.x + this.game / 1000 * deltaTime * this.direction
-      if (this.x > this.game.width - this.width) this.direction = -1
-      if (this.x < 0) this.direction = 1
+      
     }
   
     draw(ctx) {
