@@ -1,11 +1,11 @@
 export default class Layer {
-    constructor(game, width, height, speed, image) {
+    constructor(game, width, height, speed, image, x, y) {
       this.game = game
       this.width = width
       this.height = height
       this.image = image
-      this.x = 0
-      this.y = 0
+      this.x = x
+      this.y = y
     }
   
     update(deltaTime) {

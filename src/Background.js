@@ -8,10 +8,12 @@ export default class Background {
 
     this.fg = new Image()
     this.fg.src = "src/Assets/cafe background.png"
+    this.fucktard = new Image()
+    this.fucktard.src = "src/Assets/dialogue window.png"
 
     this.backgroundLayers = [
-      new Layer(this.game, this.width, this.height, 0, this.fg),
-
+        new Layer(this.game, this.width, this.height, 0, this.fg, 0, 0),
+        new Layer(this.game, this.width, 100, 0, this.fucktard, 0, 380),
     ]
   }
 
