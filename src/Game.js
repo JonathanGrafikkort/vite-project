@@ -14,7 +14,7 @@ export default class Game {
     this.background = new Background(this)
     this.fucktard = new Background(this)
     this.Dialogue = new Dialogue(this)
-    this.Dialogue.create("where can the horizon lie when a nation hides it's organic minds in a cellar, dark and grim, they must be very dim. aaaaaaaaaaaaaaa a a a a aaaaaaaaaaaa a")
+    this.Dialogue.create("where can the horizon lie when a nation hides it's organic minds in a cellar, dark and grim, they must be very dim. aaaaaaaaaaaaaaa a a a a aaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
   }
 
 
