@@ -1,35 +1,32 @@
-export default class Scene{
-    constructor(game) {
-        this.game = game
-        const book = [
-        {
-          id: 0,
-          description: "Du vaknar upp i ett rum. Du ser en dörr och ett fönster.",
-          choices: [
-            {
-              description: "Gå till dörren",
+ export const Scene = [
+  {
+      id: 1,
+      speaker: "Rudolf:",
+      description: "Welcome to my bedroom!",
+      choices: [
+          {
+              description: "Go to cafe",
+              target: 2
+          },
+          {
+              description: "Talk",
               target: 1
-            },
-            {
-              description: "Gå till fönstret",
-              target: 5
-            }
-          ]
-        },
-        {
-          id: 1,
-          description: "Du står framför dörren. Vad gör du?",
-          choices: [
-            {
-            description: "Öppna dörren",
-            target: 2
-          }, {
-            description: "Gå tillbaka",
-            target: 0
           }
-        ],
-        }
       ]
-    }
-
-}
+  },
+  {
+      id: 2,
+      speaker: "Rudolf:",
+      description: "We are at the cafe",
+      choices: [
+          {
+              description: "Go to the bedroom ~",
+              target: 1
+          },
+          {
+              description: "Talk",
+              target: 2
+          }
+      ]
+  },
+] 

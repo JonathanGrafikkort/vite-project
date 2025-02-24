@@ -2,7 +2,7 @@ import GameObject from "./GameObject.js"
 import Input from './Input'
 import Player from './Player'
 import Background from "./Background.js"
-import Dialogue from './Text.js'
+import Text from './Text.js'
 import Button from "./Button.js"
 import SceneMangar from './SceneMangar'
 
@@ -17,9 +17,9 @@ export default class Game {
     this.player = new Player(1, 1, 25, 25, "green", this)
     this.background = new Background(this)
     this.fucktard = new Background(this)
-    this.Dialogue = new Dialogue(this)
+    this.Text = new Text(this)
     this.buttons = new Button(this, this.SceneMangar, this.background)
-    this.Dialogue.create("where can the horizon lie when a nation hides it's organic minds in a cellar, dark and grim, they must be very dim. aaaaaaaaaaaaaaa a a a a aaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+    this.Text.create(this.SceneMangar.activeScene)
     this.buttons.create()
     
   }
